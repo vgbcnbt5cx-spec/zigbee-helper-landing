@@ -819,3 +819,70 @@ footer {
     margin-top: 60px;
   }
 }
+/* == Премиум-ряд экосистем под героем ============================= */
+
+.hero-integrations {
+  max-width: 860px;
+  margin: 72px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.hero-integrations-title {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
+}
+
+.hero-integrations-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-integrations-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-integrations-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 0%,
+    #ffffff 0,
+    #c48bff 32%,
+    #8149ff 70%,
+    #3c1c84 100%);
+  box-shadow:
+    0 0 25px rgba(170, 119, 255, 0.7),
+    0 12px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.hero-integrations-icon img {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.hero-integrations-name {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Чуть меньше расстояние до блока "Услуги" на десктопе */
+@media (min-width: 900px) {
+  .hero {
+    padding-bottom: 80px;
+  }
+}
