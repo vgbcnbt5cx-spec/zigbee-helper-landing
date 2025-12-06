@@ -36,9 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'Сообщение: ' + encodeURIComponent(formData.message);
 
     // === Твой токен и чат ID ===
-    const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GdU2EuCS-MTGN6LrQQmg";
-    const CHAT_ID = "501208653";
-
+    const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GuD2EuCS-MTGN6LrQQmg";
+    const CHAT_ID = "5010208653";
     if (!BOT_TOKEN) {
       alert('BOT_TOKEN отсутствует!');
       return;
