@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 👉 ВСТАВЬ СВОЙ BOT_TOKEN И CHAT_ID
     // BOT_TOKEN бери у @BotFather, CHAT_ID — из getUpdates.
-    const BOT_TOKEN = "8211567856:AAF1KKq1G7ucLb2GuD2EuCS-MTGN6Lr00mg";
+    const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GuD2EuCS-MTGN6LrQQmg";
     const CHAT_ID = "5010208653";
     if (!BOT_TOKEN || !CHAT_ID) {
       alert("Не задан BOT_TOKEN или CHAT_ID в js/app.js");
