@@ -2,187 +2,254 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zigbee Helper — умный дом на Zigbee под ключ</title>
-  <meta name="description" content="Умный дом на Zigbee под ключ: освещение, климат, безопасность и уведомления в Telegram. Проектирование, монтаж и настройка Home Assistant.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
-      <div class="logo">Zigbee Helper</div>
+      <div class="logo">ZIGBEE HELPER</div>
       <nav class="nav">
         <a href="#services">Услуги</a>
+        <a href="#process">Как работаем</a>
         <a href="#benefits">Преимущества</a>
-        <a href="#about">О нас</a>
-        <a href="#contact-form">Заявка</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contact">Заявка</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="home">
+  <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <p class="eyebrow">Умный дом на Zigbee и Home Assistant</p>
-        <h1>Локальный умный дом<br>без облаков и подписок</h1>
-        <p class="hero-sub">
-          Проектирование, подбор оборудования, монтаж и настройка умного дома на базе Zigbee и Home Assistant.
-          Сценарии освещения, климат-контроль, безопасность и уведомления в Telegram.
+        <div class="hero-label">УМНЫЙ ДОМ НА ZIGBEE И HOME ASSISTANT</div>
+        <h1>Локальный умный дом без облаков и подписок</h1>
+        <p>
+          Проектирование, подбор оборудования, монтаж и настройка умного дома на базе
+          Zigbee и Home Assistant. Сценарии освещения, климат-контроль, безопасность и
+          уведомления в Telegram и Алису — всё работает локально и стабильно.
         </p>
         <ul class="hero-list">
           <li>Работаем с существующей проводкой и вашими устройствами</li>
-          <li>Интеграция Aqara, Xiaomi, Tuya и других брендов в одну систему</li>
-          <li>Сценарии «Нет дома», ночная подсветка, защита от протечек</li>
+          <li>Поддержка и консультации после запуска</li>
+          <li>Интеграция камер, датчиков, розеток и выключателей</li>
         </ul>
+
         <div class="hero-actions">
-          <button type="button" class="btn primary" onclick="scrollToForm()">Оставить заявку</button>
+          <button class="btn primary" data-scroll="#contact">Оставить заявку</button>
+          <button class="btn ghost" data-scroll="#contact">Задать вопрос</button>
         </div>
-        <div class="hero-meta">
-          <span>Консультация по телефону: <a href="tel:+79853192149">+7 985 319‑21‑49</a></span>
-        </div>
-      </div>
-      <div class="hero-side">
-        <div class="glass-card">
-          <h3>Что можем сделать</h3>
-          <ul>
-            <li>Автоматизация освещения по датчикам и времени</li>
-            <li>Управление климатом и отоплением</li>
-            <li>Датчики протечек, дыма, открытия дверей и окон</li>
-            <li>Интеграция камер и уведомлений в Telegram</li>
-          </ul>
-        </div>
-        <div class="status-row">
-          <div class="dot online"></div>
+
+        <div class="hero-note">
+          <span class="dot online"></span>
           <span>Онлайн-мониторинг квартиры или дома 24/7</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title">Услуги</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Проектирование умного дома</h3>
-          <p>Разбираем план квартиры или дома, подбираем устройства и сценарии, чтобы всё было логично и удобно.</p>
-        </article>
-        <article class="card">
-          <h3>Монтаж и настройка</h3>
-          <p>Устанавливаем датчики, выключатели, координатор Zigbee, настраиваем Home Assistant и автоматизации.</p>
-        </article>
-        <article class="card">
-          <h3>Освещение и сценарии</h3>
-          <p>Свет по датчику движения, ночной режим, отключение всего одним нажатием, имитация присутствия.</p>
-        </article>
-        <article class="card">
-          <h3>Климат и отопление</h3>
-          <p>Термостаты, управление кондиционерами, расписания и сценарии экономии электроэнергии.</p>
-        </article>
-        <article class="card">
-          <h3>Безопасность и уведомления</h3>
-          <p>Датчики протечек, дыма, газа, открытия дверей и окон. Уведомления и фото в Telegram при срабатывании.</p>
-        </article>
-        <article class="card">
-          <h3>Поддержка и развитие</h3>
-          <p>Добавление новых устройств, доработка сценариев, помощь с апдейтами и резервным копированием.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="benefits">
-    <div class="container">
-      <h2 class="section-title">Почему Zigbee и Home Assistant</h2>
-      <div class="grid-2">
-        <div>
-          <ul class="check-list">
-            <li>Устройства работают локально, даже если пропал интернет</li>
-            <li>Стабильная mesh‑сеть Zigbee с хорошим радиусом действия</li>
-            <li>Можно объединить разные бренды в одну систему</li>
-            <li>Нет привязки к одному приложению и экосистеме</li>
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <div class="hero-card-title">Типичный проект</div>
+          <ul class="hero-card-list">
+            <li>8–20 датчиков (движение, протечки, открытие)</li>
+            <li>Свет по движению и времени суток</li>
+            <li>Уведомления о протечках и открытых окнах</li>
+            <li>Сценарий «Никого нет дома»</li>
           </ul>
-        </div>
-        <div>
-          <p>
-            Мы помогаем собрать под ваши задачи компактную и понятную систему. Скорее всего, часть устройств
-            у вас уже есть — мы интегрируем их в Home Assistant, настроим автоматизации и покажем, как
-            управлять всем с телефона или планшета.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">О проекте Zigbee Helper</h2>
-      <div class="grid-2">
-        <div>
-          <p>
-            Zigbee Helper — это помощь в создании умного дома без лишних сложностей. Мы не навязываем лишние
-            устройства, а подбираем решения под конкретные задачи: свет, климат, безопасность, комфорт.
-          </p>
-          <p>
-            Работаем с популярными устройствами Aqara, Xiaomi, Tuya, Sonoff и другими. На базе Home Assistant
-            строим единую систему, которую при желании можно расширять.
-          </p>
-        </div>
-        <div>
-          <div class="info-box">
-            <h3>Контакты</h3>
-            <p><strong>Телефон:</strong> <a href="tel:+79853192149">+7 985 319‑21‑49</a></p>
-            <p><strong>Email:</strong> <a href="mailto:pushkarev.m@gmil.com">pushkarev.m@gmil.com</a></p>
+          <div class="hero-card-footer">
+            <span class="hero-chip">Zigbee, Home Assistant, Алиса</span>
+            <span class="hero-chip secondary">Без подписок и облаков</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact-form">
+  <!-- ПЛАТФОРМЫ -->
+  <section class="platforms">
+    <div class="container platforms-row">
+      <div class="platform-card">
+        <div class="platform-icon">
+          <img src="img/logos/zigbee.svg" alt="Zigbee" />
+        </div>
+        <span>Zigbee</span>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-icon">
+          <img src="img/logos/ha.svg" alt="Home Assistant" />
+        </div>
+        <span>Home Assistant</span>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-icon">
+          <img src="img/logos/alisa.svg" alt="Алиса" />
+        </div>
+        <span>Алиса</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- УСЛУГИ -->
+  <section id="services" class="section">
     <div class="container">
-      <h2 class="section-title">Оставьте заявку</h2>
-      <p class="section-subtitle">Напишите пару слов о вашей квартире или доме — мы предложим варианты автоматизации и примерный бюджет.</p>
-      <div class="form-wrapper">
-        <form id="feedbackForm" class="form">
+      <h2>Услуги</h2>
+      <div class="grid cards-3">
+        <div class="card">
+          <h3>Проектирование умного дома</h3>
+          <p>
+            Разбираем план квартиры или дома, подбираем устройства и сценарии так, чтобы
+            всё было логично и удобно.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Монтаж и настройка</h3>
+          <p>
+            Устанавливаем датчики, выключатели, Zigbee-координатор, настраиваем Home
+            Assistant и автоматизации.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Освещение и сценарии</h3>
+          <p>
+            Свет по датчику движения, ночной режим, отключение всего одним нажатием,
+            имитация присутствия.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Климат и отопление</h3>
+          <p>
+            Термоголовки, тёплый пол, управление обогревателями и кондиционерами с учётом
+            времени и тарифа.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Безопасность и уведомления</h3>
+          <p>
+            Датчики протечек, дыма, газа, открытия дверей и окон, уведомления в Telegram и
+            Алису.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Поддержка и развитие</h3>
+          <p>
+            Добавление новых устройств, доработка сценариев, консультации по расширению
+            системы.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАК МЫ РАБОТАЕМ -->
+  <section id="process" class="section section-alt">
+    <div class="container">
+      <h2>Как мы работаем</h2>
+      <div class="process">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Заявка</h3>
+          <p>Вы оставляете заявку или пишете кратко задачу и метраж помещения.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Проект и смета</h3>
+          <p>Подбираю устройства, предлагаю варианты по бюджету и функционалу.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Монтаж и настройка</h3>
+          <p>Устанавливаем оборудование, настраиваем сценарии, проверяем всё вместе.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Поддержка</h3>
+          <p>После запуска остаюсь на связи, помогаю с донастройкой и идеями сценариев.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <h2>Почему это удобно</h2>
+      <div class="grid cards-3">
+        <div class="card">
+          <h3>Локально и надёжно</h3>
+          <p>Всё работает без облаков и подписок — дом продолжит работать даже без интернета.</p>
+        </div>
+        <div class="card">
+          <h3>Гибкий сценарий</h3>
+          <p>Можно реализовать как простые, так и сложные сценарии — без привязки к одному бренду.</p>
+        </div>
+        <div class="card">
+          <h3>Интеграция с Алисой</h3>
+          <p>Голосовое управление светом, климатом и сценариями, быстрые фразы и виджеты.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОБО МНЕ -->
+  <section id="about" class="section section-alt">
+    <div class="container about">
+      <div>
+        <h2>Кто будет делать ваш умный дом</h2>
+        <p>
+          Занимаюсь качеством товаров и автоматизацией процессов, работаю с реальными объектами
+          и типовыми квартирами. Помогаю сделать умный дом понятным, а не игрушкой «для айтишников».
+        </p>
+        <p>
+          Подбираю решения под задачу, а не под бренд — важно, чтобы дом работал стабильно и не
+          мешал, а помогал.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЗАЯВКА -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Оставить заявку</h2>
+        <p>
+          Напишите, что хотите автоматизировать: квартиру, дом, дачу. Можно просто описать
+          задачу своими словами.
+        </p>
+
+        <form id="contact-form" class="contact-form">
           <label>
             Имя
             <input type="text" name="name" placeholder="Как к вам обращаться" required />
           </label>
           <label>
             Телефон
-            <input type="tel" name="phone" placeholder="+7 ..." required />
+            <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required />
           </label>
           <label>
             Email
-            <input type="email" name="email" placeholder="name@example.com" required />
+            <input type="email" name="email" placeholder="example@mail.com" />
           </label>
           <label>
             Сообщение
-            <textarea name="message" rows="4" placeholder="Опишите объект, задачи или вопросы" required></textarea>
+            <textarea name="message" rows="4" placeholder="Квартира 60 м², хочу свет по датчикам, контроль протечек..." required></textarea>
           </label>
           <button type="submit" class="btn primary full">Отправить заявку</button>
-          <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          <div id="formSuccess" class="form-success">Заявка отправлена в Telegram. Я отвечу вам в ближайшее время.</div>
         </form>
-        <div id="formSuccess" class="form-success" style="display:none;">
-          Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.
-        </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section section-alt" id="contacts">
-    <div class="container">
-      <h2 class="section-title">Контакты</h2>
-      <div class="contacts-grid">
-        <div>
-          <p><strong>Телефон:</strong> <a href="tel:+79853192149">+7 985 319‑21‑49</a></p>
-          <p><strong>Email:</strong> <a href="mailto:pushkarev.m@gmil.com">pushkarev.m@gmil.com</a></p>
-        </div>
-        <div>
-          <p>Можно написать в Telegram или сразу оставить заявку через форму — обсудим задачи и подберём оборудование под ваш объект.</p>
-        </div>
+      <div class="contact-info">
+        <h3>Контакты</h3>
+        <ul>
+          <li>Телефон: <a href="tel:+79853192149">+7 985 319-21-49</a></li>
+          <li>Email: <a href="mailto:pushkarev.m@gmil.com">pushkarev.m@gmil.com</a></li>
+        </ul>
+        <p class="contact-note">
+          Заявки с сайта приходят в Telegram-бота — ответ обычно в течение дня.
+        </p>
       </div>
     </div>
   </section>
@@ -190,7 +257,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span>© 2025 Zigbee Helper — умный дом на Zigbee под ключ</span>
-      <span>Сделано с Home Assistant и Zigbee</span>
+      <span>Сделано на Home Assistant и Zigbee</span>
     </div>
   </footer>
 
