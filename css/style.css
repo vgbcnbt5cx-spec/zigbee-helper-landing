@@ -607,3 +607,61 @@ h3 {
 .about-list li + li {
   margin-top: 6px;
 }
+/* Премиальное оформление блока "Услуги" */
+
+.section {
+  scroll-margin-top: 90px; /* чтобы при клике в меню заголовок не прилипал к самому верху */
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  letter-spacing: 0.04em;
+}
+
+.services-grid,
+.grid.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.services-grid .card,
+.grid.cards-3 .card {
+  background: radial-gradient(circle at top left, rgba(120, 134, 255, 0.18), rgba(8, 14, 40, 0.95));
+  border-radius: 24px;
+  padding: 20px 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(132, 154, 255, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.services-grid .card h3,
+.grid.cards-3 .card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.services-grid .card p,
+.grid.cards-3 .card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cfd3ff;
+}
+
+/* Адаптив: на планшетах по 2 карточки, на телефонах по одной */
+
+@media (max-width: 1024px) {
+  .services-grid,
+  .grid.cards-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .services-grid,
+  .grid.cards-3 {
+    grid-template-columns: 1fr;
+  }
+}
