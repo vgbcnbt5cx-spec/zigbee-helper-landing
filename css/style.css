@@ -665,3 +665,92 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+/* Премиальный блок "Как мы работаем" */
+
+.container.narrow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.step {
+  background: rgba(38, 44, 88, 0.25);
+  border: 1px solid rgba(124, 140, 255, 0.25);
+  padding: 24px 26px;
+  border-radius: 22px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.4);
+}
+
+.step-number {
+  font-size: 28px;
+  opacity: 0.35;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.step h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #cfd3ff;
+  line-height: 1.55;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Премиальный блок "Преимущества" */
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.benefit {
+  background: radial-gradient(circle at top right, rgba(140, 154, 255, 0.18), rgba(16, 20, 48, 0.9));
+  border: 1px solid rgba(124, 140, 255, 0.22);
+  border-radius: 22px;
+  padding: 24px 26px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.4);
+}
+
+.benefit h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  font-size: 14px;
+  color: #d0d4ff;
+  line-height: 1.6;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
