@@ -1,15 +1,17 @@
-// Плавная прокрутка к форме
+// Прокрутка к форме
 function scrollToForm() {
   const el = document.getElementById('contact-form');
-  if (!el) return;
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 // Отправка формы в Telegram
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('feedbackForm');
   const successEl = document.getElementById('formSuccess');
-  if (!form) return;
+
+  if (!form || !successEl) return;
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -27,20 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const text =
-      '📩 Новая заявка с лендинга Zigbee Helper:%0A' +
+      '🆕 Новая заявка с лендинга Zigbee Helper:%0A' +
       'Имя: ' + encodeURIComponent(formData.name) + '%0A' +
       'Телефон: ' + encodeURIComponent(formData.phone) + '%0A' +
       'Email: ' + encodeURIComponent(formData.email) + '%0A' +
       'Сообщение: ' + encodeURIComponent(formData.message);
 
-    // === ВСТАВЬ СЮДА СВОЙ BOT TOKEN И CHAT_ID ===
-    // Токен брать у @BotFather, CHAT_ID — из getUpdates.
-    const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GuD2EuCS-MTGN6LrQQmg;
-    const CHAT_ID = "5010208653;
-    // =================================================
+    // === Твой токен и чат ID ===
+    const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GdU2EuCS-MTGN6LrQQmg";
+    const CHAT_ID = "501208653";
 
-    if (!BOT_TOKEN || BOT_TOKEN === "YOUR_BOT_TOKEN_HERE") {
-      alert('Telegram BOT_TOKEN не задан. Укажите его в js/app.js');
+    if (!BOT_TOKEN) {
+      alert('BOT_TOKEN отсутствует!');
       return;
     }
 
@@ -48,16 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const res = await fetch(url);
-      if (!res.ok) throw new Error('Response not OK');
-      if (successEl) {
-        successEl.style.display = 'block';
-      } else {
-        alert('Заявка отправлена!');
-      }
+      if (!res.ok) throw new Error('Ошибка запроса');
+
+      successEl.style.display = 'block';
       this.reset();
+
     } catch (err) {
       console.error(err);
-      alert('Не удалось отправить заявку в Telegram. Проверьте настройки бота.');
+      alert('Ошибка: не удалось отправить заявку.');
     }
   });
 });
