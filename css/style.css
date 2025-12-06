@@ -577,3 +577,33 @@ h3 {
     font-size: 26px;
   }
 }
+.about-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lead {
+  font-size: 17px;
+  color: #f0f1ff;
+  opacity: 0.95;
+  margin-bottom: 18px;
+}
+
+.accent {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #e3e5ff;
+  letter-spacing: 0.2px;
+}
+
+.about-list {
+  margin: 10px 0 20px;
+  padding-left: 22px;
+  font-size: 15px;
+  color: #cfd3ff;
+  line-height: 1.55;
+}
+
+.about-list li + li {
+  margin-top: 6px;
+}
