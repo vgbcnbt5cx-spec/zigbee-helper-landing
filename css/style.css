@@ -754,3 +754,41 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+/* ===== Премиальный мягкий пульс для кнопки "Оставить заявку" ===== */
+
+.btn-primary,
+button.btn-primary,
+input[type="submit"].btn-primary {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.btn-primary::before,
+button.btn-primary::before,
+input[type="submit"].btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%) scale(0.85);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 120, 255, 0.55),
+    rgba(130, 70, 255, 0.25),
+    rgba(0, 0, 0, 0)
+  );
+  filter: blur(22px);
+  opacity: 0;
+  z-index: -2;
+  animation: premiumPulse 4s ease-in-out infinite;
+}
+
+@keyframes premiumPulse {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.82); }
+  40%  { opacity: 0.55; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.05); }
+}
