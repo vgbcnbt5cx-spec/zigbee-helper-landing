@@ -1,0 +1,12 @@
+<svg width="42" height="42" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="zigGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF7CFD"/>
+      <stop offset="50%" stop-color="#C458FF"/>
+      <stop offset="100%" stop-color="#4B2CFF"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="120" fill="url(#zigGrad)"/>
+  <path d="M165.9 62h-35.7L64 128l66.2 66h35.8l-66.3-66z"
+        fill="white" fill-opacity="0.96"/>
+</svg>
