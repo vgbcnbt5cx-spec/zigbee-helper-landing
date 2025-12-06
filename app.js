@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === ВСТАВЬ СЮДА СВОЙ BOT TOKEN И CHAT_ID ===
     // Токен брать у @BotFather, CHAT_ID — из метода getUpdates.
-    const BOT_TOKEN = "YOUR_BOT_TOKEN_HERE";
-    const CHAT_ID = "YOUR_CHAT_ID_HERE";
-    // =================================================
+    const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GuD2EuCS-MTGN6LrQQmg;
+    const CHAT_ID = "5010208653;
+      // =================================================
 
     if (!BOT_TOKEN || BOT_TOKEN === "YOUR_BOT_TOKEN_HERE") {
       alert('Telegram BOT_TOKEN не задан. Укажите его в js/app.js');
