@@ -732,3 +732,32 @@ footer {
     padding: 64px 0;
   }
 }
+/* ===== INTEGRATIONS FIX ===== */
+
+.integrations-row {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* Центрируем */
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.integration-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Иконка + текст в колонку и по центру */
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(132, 149, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.integration-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
