@@ -814,3 +814,75 @@ main {
 .security-icon--camera {
   background: radial-gradient(circle at 30% 0, #e9d5ff, #a855f7);
 }
+/* ===== ВИЗУАЛЬНЫЙ АКЦЕНТ ДЛЯ БЛОКА БЕЗОПАСНОСТИ ===== */
+
+.section.security,
+#security.section {
+  position: relative;
+  background:
+    radial-gradient(circle at top, #181d3d 0, #050716 60%),
+    #050716;
+  border-top: 1px solid rgba(148, 163, 255, 0.45);
+  border-bottom: 1px solid rgba(148, 163, 255, 0.25);
+  overflow: hidden;
+}
+
+.section.security::before,
+#security.section::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(244, 114, 182, 0.15), transparent 55%),
+    radial-gradient(circle at 90% 100%, rgba(56, 189, 248, 0.18), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* чтобы контент был над подсветкой */
+.section.security .container,
+#security.section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* заголовок и подзаголовок — чуть «важнее» */
+
+#security .section-title,
+.section.security .section-title {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.security-subtitle {
+  max-width: 760px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(235, 239, 255, 0.85);
+}
+/* подчёркиваем важность карточек безопасности */
+
+.security-item {
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(251, 191, 36, 0.06), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.12), transparent 60%),
+    rgba(7, 11, 30, 0.96);
+  border: 1px solid rgba(148, 163, 255, 0.45);
+  box-shadow:
+    0 22px 55px rgba(3, 7, 18, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.security-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 28px 70px rgba(15, 23, 42, 0.98),
+    0 0 32px rgba(129, 140, 248, 0.55);
+  border-color: rgba(196, 181, 253, 0.9);
+}
