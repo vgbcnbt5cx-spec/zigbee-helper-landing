@@ -9,7 +9,7 @@ document.addEventListener("click", (e) => {
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-// Отправка формы в Telegram
+// Отправка формы в Telegram + цель Метрики
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
   const successEl = document.getElementById("formSuccess");
@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "Сообщение: " +
       encodeURIComponent(formData.message);
 
-    // 👉 ВСТАВЬ СВОЙ BOT_TOKEN И CHAT_ID
-    // BOT_TOKEN бери у @BotFather, CHAT_ID — из getUpdates.
+    // Твой бот и чат
     const BOT_TOKEN = "8211567856:AAFlKKq1G7ucLb2GuD2EuCS-MTGN6LrQQmg";
     const CHAT_ID = "5010208653";
+
     if (!BOT_TOKEN || !CHAT_ID) {
       alert("Не задан BOT_TOKEN или CHAT_ID в js/app.js");
       return;
@@ -59,7 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await fetch(url);
       if (!res.ok) throw new Error("Response not OK");
 
-      successEl.style.display = "block";
+      // 👉 цель Яндекс.Метрики (ID счётчика 105755549, идентификатор цели form_send)
+      if (typeof ym === "function") {
+        ym(105755549, "reachGoal", "form_send");
+      }
+
+      if (successEl) {
+        successEl.style.display = "block";
+      }
       this.reset();
     } catch (err) {
       console.error(err);
